@@ -1,8 +1,5 @@
 package Task_5;
 
 interface Movable {
-    public void moveUp();
-    public void moveDown();
-    public void moveLeft();
-    public void moveRight();
+    public void moveUpRight(double x, double y);
 }
