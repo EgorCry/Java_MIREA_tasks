@@ -12,9 +12,14 @@ public class MovableRectangle implements Movable {
         this.downrigth = new MovablePoint(x+width, y-height);
     }
 
+    public void newRectangle(double width, double height, double x, double y){
+        upleft.setXY(x, y);
+        downrigth.setXY(x+width, y-height);
+    }
+
     public void setNewCoordinates(double x, double y){
         upleft.setXY(x, y);
-        downrigth.setXY(x-width, y-height);
+        downrigth.setXY(x+getWidth(), y-getHeight());
     }
 
     public void setWidthCoor(double width){
