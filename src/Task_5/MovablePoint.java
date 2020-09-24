@@ -1,29 +1,44 @@
 package Task_5;
 
 public class MovablePoint implements Movable{
-    int x, y, xSpeed, ySpeed;
+    private double x, y;
 
-    public MovablePoint(int x, int y, int xSpeed, int ySpeed){
+    public MovablePoint(double x, double y) {
+        setX(x);
+        setY(y);
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public void setX(double x) {
         this.x = x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
         this.y = y;
-        this.xSpeed = xSpeed;
-        this.ySpeed = ySpeed;
     }
 
+    public void setXY(double x, double y){
+        setX(x);
+        setY(y);
+    }
+
+    @Override
+    public void moveUpRight(double x, double y) {
+        this.x += x;
+        this.y += y;
+    }
+
+    @Override
     public String toString() {
-        return "Object moved to x: " + x + " with speed: " + xSpeed + " and in y: " + y + " with speed: " + ySpeed;
+        return "x=" + x +
+                ", y=" + y +
+                '}';
     }
-
-    public void moveUp(){
-        ySpeed++;
-    }
-    public void moveDown(){
-        ySpeed--;
-    };
-    public void moveLeft(){
-        xSpeed--;
-    };
-    public void moveRight(){
-        xSpeed++;
-    };
 }
