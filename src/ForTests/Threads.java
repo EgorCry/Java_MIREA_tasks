@@ -7,12 +7,12 @@ public class Threads {
     static int totalSum;
     static int totalSum1;
     static ReentrantLock lock = new ReentrantLock();
-    static long[] sum = new long[4];
+    static long[] sum = new long[12];
 
     public static void main(String[] args) throws InterruptedException {
         long startTime = System.currentTimeMillis();
         ArrayList<Thread> threads = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 12; i++) {
             final int localI = i;
             Thread thread = new Thread(() -> work(localI));
             thread.start();
