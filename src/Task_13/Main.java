@@ -8,8 +8,8 @@ public class Main {
 
         try {
             int weight = Integer.parseInt(new Scanner(System.in).nextLine());
-            model.setWeight(1950);
             model.setYear(3506);
+            model.setWeight(1950);
         }
         catch (FutureModelException ex){
             System.out.println("Wow, you are from future, aren't you?!");
@@ -18,7 +18,7 @@ public class Main {
             System.out.println("Our lines cannot work with models of this weights, sowwy");
         }
         finally {
-            System.out.println(model);
+            System.out.println("Nice car!");
         }
         int ans = Integer.parseInt(new Scanner(System.in).nextLine());
         if(ans==1){
