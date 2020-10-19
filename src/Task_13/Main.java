@@ -20,9 +20,7 @@ public class Main {
         finally {
             System.out.println("Nice car!");
         }
-        int ans = Integer.parseInt(new Scanner(System.in).nextLine());
-        if(ans==1){
-            throw new RuntimeException();
-        }
+
+        throw new RuntimeException();
     }
 }
