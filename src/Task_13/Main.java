@@ -20,7 +20,9 @@ public class Main {
         finally {
             System.out.println(model);
         }
-
-
+        int ans = Integer.parseInt(new Scanner(System.in).nextLine());
+        if(ans==1){
+            throw new RuntimeException();
+        }
     }
 }
