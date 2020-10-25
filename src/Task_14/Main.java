@@ -28,7 +28,41 @@ public class Main {
         Pattern pattern = Pattern.compile(stringBuilder.toString());
         Matcher matcher = pattern.matcher(string);
 
+        //Non-regex method
+//        String nonregex = string;
+//        String temp = "";
+//        String check = "";
+//        int r = 0;
+//        for (int i = 0; i < nonregex.length(); i++) {
+//            check += nonregex.charAt(i);
+//            for (int j = 0; j < rules.size(); j++) {
+//                String test = (String)rules.keySet().toArray()[j];
+//                if(test.length() <= nonregex.length()-check.length()) {
+//                    r = i;
+//                    for (int k = 0; k < test.length(); k++) {
+//                        temp += nonregex.charAt(r);
+//                        r += 1;
+//                    }
+//                    if(temp.equals(test)){
+//                        String change = check;
+//                        change += rules.get(j);
+//                        for (int k = i; k < nonregex.length(); k++) {
+//                            change += nonregex.charAt(k);
+//                        }
+//                        nonregex = change;
+//                        if(i+rules.get(j).length()<nonregex.length()) {
+//                            i += rules.get(j).length();
+//                        }
+//                        break;
+//                    }
+//                    temp = "";
+//                }
+//                else continue;
+//            }
+//        }
+
         //Data output
         System.out.println(matcher.replaceAll(x -> rules.get(x.group())));
+//        System.out.println(nonregex);
     }
 }
