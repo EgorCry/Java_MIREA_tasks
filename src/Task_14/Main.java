@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         //Data entry
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+        int N = Integer.parseInt(scanner.nextLine());
         Map<String, String> rules = new HashMap<>();
         for (int i = 0; i < N; i++) {
             rules.put(scanner.next(), scanner.next());
@@ -30,10 +30,11 @@ public class Main {
 
         //Non-regex method
         String nonregex = string;
-        for (int i = 0; i < nonregex.length(); i++) {
+        int length = nonregex.length();
+        for (int i = 0; i < length; i++) {
             for (int j = 0; j < rules.size(); j++) {
                 String temp = (String)rules.keySet().toArray()[j];
-                String rule = (String) rules.values().toArray()[j];
+                String rule = (String)rules.values().toArray()[j];
                 if (i + temp.length() < nonregex.length() && nonregex.substring(i, i + temp.length()).equals(temp)) {
                     nonregex = nonregex.replace(temp, rule + " ");
                     i += rule.length();
