@@ -1,0 +1,8 @@
+15/11/2020 08:01:13 | Server: new user - Leia
+15/11/2020 08:01:19 | Server: new user - Luke
+15/11/2020 08:01:35 | Leia: Luke, tell me. What's troubling you?
+15/11/2020 08:01:55 | Luke: Vader's here, now, on this moon.
+15/11/2020 08:02:05 | Leia: How do you know?
+15/11/2020 08:02:15 | Luke: I feel his presence. But he can also feel mine. He's come for me. He can feel it when I'm near. That's why I have to go. As long as I stay, I'm endangering the group and our mission. I have to face him.
+15/11/2020 08:02:25 | Leia: Why?
+15/11/2020 08:02:35 | Luke: He's my father.
