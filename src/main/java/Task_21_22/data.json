@@ -1,0 +1,26 @@
+[
+	{
+		"id": "1",
+		"data": "Egor",
+		"isGood": "false",
+		"description": "immortality and boring"
+	},
+	{
+		"id": "2",
+		"data": "Evil",
+		"isGood": "true",
+		"description": "make sense for good"
+	},
+	{
+		"id": "3",
+		"data": "Humankind",
+		"isGood": "true",
+		"description": "welcome to the chaos and hypocrisy"
+	},
+	{
+		"id": "4",
+		"data": "Life",
+		"isGood": "false",
+		"description": "word with no straight meaning"
+	}
+]

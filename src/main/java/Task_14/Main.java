@@ -45,7 +45,7 @@ public class Main {
         nonregex = nonregex.replaceAll(" ", "");
 
         //Data output
-        System.out.println(matcher.replaceAll(x -> rules.get(x.group())));
+//        System.out.println(matcher.replaceAll(x -> rules.get(x.group())));
         System.out.println(nonregex);
     }
 }
