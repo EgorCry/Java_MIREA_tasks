@@ -108,7 +108,6 @@ public class Worker {
         double first, second;
         double result = 0;
         String expressionWithoutSpace = expression.replace(" ", "");
-        Pattern pattern = Pattern.compile("(?<first>[-]*\\d+)(?<operator>[+-/*])(?<second>[-]*\\d+)");
         Matcher matcher = pattern.matcher(expressionWithoutSpace);
         if (matcher.find()) {
             first = Double.valueOf(matcher.group("first"));
