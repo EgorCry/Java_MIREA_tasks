@@ -20,7 +20,9 @@ public class HashMap<K, V> implements HashMapInterface<K, V>{
 
     @Override
     public void add(K key, V value) {
+        System.out.println(key.hashCode());
         int index = Math.abs(key.hashCode() % hashMap.size());
+        System.out.println(index);
         if(hashMap.get(index).size()==0){
             hashMap.get(index).add(new KeyValue<>(key, value));
         }

@@ -18,5 +18,7 @@ public class Main {
         for (String V : hashMap) {
             System.out.println(V);
         }
+        HashMap<String, Integer> test = new HashMap<>();
+        test.add("Cyberpunk", -69);
     }
 }
