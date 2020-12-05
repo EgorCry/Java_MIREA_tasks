@@ -64,17 +64,11 @@ public class HashMap<K, V> implements HashMapInterface<K, V>{
     }
 
     public class CustomIterator implements Iterator<V>{
-        private int currentIndex = 0, currentArrayIndex = 0;
+        private int currentIndex = 0;
 
         @Override
         public boolean hasNext() {
-            if(currentIndex < hashMap.get(currentArrayIndex).size()){
-                return true;
-            }
-            else{
-                currentIndex = 0;
-                return false;
-            }
+            return currentIndex < hashMap.get(currentIndex).size();
         }
 
         @Override
