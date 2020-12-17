@@ -18,17 +18,17 @@ public class Main {
         Employee employee = new Employee();
         Type ReflectionTaskType = new TypeToken<ArrayList<ReflectionOfTask>>(){
         }.getType();
-        Class<Employee> worker = Employee.class;
+        Class<? extends Employee> worker = Employee.class;
 
         List<Method> methodList = Arrays.stream(worker.getDeclaredMethods())
                 .filter(a -> Arrays.stream(a.getAnnotations()).anyMatch(b -> b instanceof Backbone))
                 .collect(Collectors.toList());
 
         ArrayList<ReflectionOfTask> tasks = gson.fromJson(Employee.getTasks(), ReflectionTaskType);
-        for(ReflectionOfTask reflectionTaskType: tasks){
+        for(ReflectionOfTask reflection: tasks){
             for(Method declareMethod: methodList){
-                if(reflectionTaskType.getType().equals(declareMethod.getName())){
-                    declareMethod.invoke(employee, reflectionTaskType.getData());
+                if(reflection.getType().equals(declareMethod.getName())){
+                    declareMethod.invoke(employee, reflection.getData());
                 }
             }
         }
