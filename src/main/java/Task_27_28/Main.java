@@ -18,7 +18,7 @@ public class Main {
         Employee employee = new Employee();
         Type ReflectionTaskType = new TypeToken<ArrayList<ReflectionOfTask>>(){
         }.getType();
-        Class<? extends Employee> worker = Employee.class;
+        Class<? extends Employee> worker = employee.getClass();
 
         List<Method> methodList = Arrays.stream(worker.getDeclaredMethods())
                 .filter(a -> Arrays.stream(a.getAnnotations()).anyMatch(b -> b instanceof Backbone))
